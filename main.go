@@ -16,16 +16,18 @@ import (
 	"github.com/joho/godotenv"
 )
 
+// Block is block
 type Block struct {
-	Index     int
-	Timestamp string
-	BPM       int
-	Hash      string
-	PrevHash  string
+	Index     int    `json:"index,omitempty"`
+	Timestamp string `json:"timestamp,omitempty"`
+	BPM       int    `json:"bpm,omitempty"`
+	Hash      string `json:"hash,omitempty"`
+	PrevHash  string `json:"prev_hash,omitempty"`
 }
 
+// Message is wrap data
 type Message struct {
-	BPM int
+	BPM int `json:"bpm,omitempty"`
 }
 
 var mutex = &sync.Mutex{}
@@ -38,6 +40,7 @@ var mutex = &sync.Mutex{}
 * PrevHash : sha256 identifier of the previous record in chain
 **/
 
+// Blockchain multiple block
 var Blockchain []Block
 
 func calculateHash(block Block) string {
