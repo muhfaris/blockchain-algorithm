@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "cfedae4c-0430-4a98-8288-8ca577b66e62",
+		"name": "blockchain-algorithm",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:1111",
+					"host": [
+						"localhost"
+					],
+					"port": "1111"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bpm\":6\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1111",
+					"host": [
+						"localhost"
+					],
+					"port": "1111"
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
